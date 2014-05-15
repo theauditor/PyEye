@@ -22,6 +22,7 @@ def riptext(Img):
     Img.save(".tmptif.tif")
     Com = "tesseract .tmptif.tif .ripdata"
     subprocess.check_output(Com, shell=True)
+    Com = "cat .ripdata.txt"
     Output = subprocess.check_output(Com, shell=True)
     os.remove('.tmptif.tif')
     os.remove('.ripdata.txt')
