@@ -20,8 +20,9 @@ import subprocess
 
 def riptext(Img):
     Img.save(".tmptif.tif")
-    Com = "tesseract .tmptif.tif .ripdata"
-    os.popen(Com)
+    Com = ["tesseract", ".tmptif.tif", ".ripdata"]
+    FNULL = open(os.devnull, 'w')
+    retcode = subprocess.call(Com, stdout=FNULL, stderr=subprocess.STDOUT)
     Com = "cat .ripdata.txt"
     Output = subprocess.check_output(Com, shell=True)
     os.remove('.tmptif.tif')
