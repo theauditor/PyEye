@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#Kronos - 0.1 [Abstract Anion] - Alpha
+#PyEye 0.1 - Nocturnal Nickel
 #Copyright (C) 2014 Blaise M Crowly  - All rights reserved
 #Created at Xincoz [xincoz.com]
 #GPL v3
@@ -21,7 +21,7 @@ import subprocess
 def riptext(Img):
     Img.save(".tmptif.tif")
     Com = "tesseract .tmptif.tif .ripdata"
-    subprocess.check_output(Com, shell=True)
+    os.popen(Com)
     Com = "cat .ripdata.txt"
     Output = subprocess.check_output(Com, shell=True)
     os.remove('.tmptif.tif')
