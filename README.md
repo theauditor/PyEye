@@ -12,10 +12,10 @@ It also require the python PIL library.
 Use
 ---
 Copy pyeye.py to the working directory
-  > from pyeye import *
-  > from PIL import Image
-  > Im = Image.open('example.png')
-  > print riptext(Im)
+   from pyeye import *
+   from PIL import Image
+   Im = Image.open('example.png')
+   print riptext(Im)
 
 
 
