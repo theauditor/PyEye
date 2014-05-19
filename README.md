@@ -1,7 +1,7 @@
 PyEye
 ======
 A python binding for tesseract.
-This is a python binding for tesseract tested in linux. It makes use of the PIL library. 
+This is a python ~binding~ link/hack for tesseract tested in linux. It makes use of the PIL library. 
 
 Requirements
 ------------
